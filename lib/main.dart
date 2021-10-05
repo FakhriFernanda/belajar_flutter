@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: Text(
-            'Hello Appbar',
+            'Hello Container',
             style: TextStyle(
               // color: Colors.yellow,
               fontWeight: FontWeight.bold,
@@ -31,42 +31,25 @@ class Home extends StatelessWidget {
           ),
           actions: [
             Icon(
-              Icons.search,
-              color: Colors.black,
+              Icons.account_circle,
+              // color: Colors.black,
             ),
             Icon(
-              Icons.more_vert,
-              color: Colors.black,
-            )
+              Icons.access_alarm,
+              // color: Colors.black,
+            ),
           ],
         ),
-        drawer: Drawer(
-            child: ListView(padding: EdgeInsets.zero, children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text(
-              'Drawer Header',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
-                color: Colors.white,
-              ),
-            ),
+        drawer: Drawer(),
+        body: Container(
+          margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          padding: EdgeInsets.all(30),
+          color: Colors.blue,
+          child: Icon(
+            Icons.home,
+            color: Colors.red,
+            size: 100,
           ),
-          // ListTile(
-          //   title: const Text('Item 1'),
-          //   onTap: () {
-          //     Navigator.pop(context);
-          //   },
-          // ),
-          // ListTile(
-          //   title: const Text('Item 2'),
-          //   onTap: () {
-          //     Navigator.pop(context);
-          //   },
-          // )
-        ])));
+        ));
   }
 }
